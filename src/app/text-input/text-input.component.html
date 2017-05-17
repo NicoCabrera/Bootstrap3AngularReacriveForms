@@ -1,0 +1,40 @@
+<form [formGroup]="form" novalidate>
+  <!-- Input text -->
+  <div class="form-group">
+    <label for="usernameExample">Username</label>
+    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="form.username" formControlName="username">
+  </div>
+  <!-- -->
+
+  <!-- Input email -->
+  <div class="form-group">
+    <label for="emailExample">Email</label>
+    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="form.email" formControlName="email">
+  </div>
+  <!-- -->
+
+  <!-- Input password-->
+  <div class="form-group">
+    <label for="passwordExample">Password</label>
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="form.password" formControlName="password">
+  </div>
+  <!-- -->
+
+  <!-- Input number-->
+  <div class="form-group">
+    <label for="numberExample">Number</label>
+    <input type="number" class="form-control" placeholder="Number" [(ngModel)]="form.number" formControlName="number">
+  </div>
+  <!-- -->
+
+
+  <!-- Textarea -->
+  <label>Comments</label>
+  <textarea class="form-control" rows="3" maxlength="30" [(ngModel)]="form.comment" formControlName="comment"></textarea>
+  <!-- -->
+  <!-- Buttons -->
+  <!-- Submit -->
+  <button type="submit" class="btn btn-success" (click)="showObjectData()" [disabled]="!form.valid">Submit</button>
+  <!-- Reset -->
+  <button type="reset" class="btn btn-danger">Reset</button>
+</form>

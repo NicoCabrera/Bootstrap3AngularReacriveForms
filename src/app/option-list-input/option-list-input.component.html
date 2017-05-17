@@ -1,0 +1,49 @@
+<form [formGroup]="form" novalidate>
+
+  <!-- Radio buttons -->
+  <label>Gender:</label>
+  <div class="radio">
+    <label><input type="radio" [(ngModel)]="form.gender" formControlName="gender" name="gender" value="M">Male</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" [(ngModel)]="form.gender" formControlName="gender" name="gender" value="F">Female</label>
+  </div>
+  <!--Radio inline
+  <label class="radio-inline">
+    <input type="radio" [(ngModel)]="form.gender" formControlName="gender" name="gender" value="M">Male
+  </label>
+  <label class="radio-inline">
+    <input type="radio" [(ngModel)]="form.gender" formControlName="gender" name="gender" value="F">Female
+  </label>
+  -->
+  <!-- Checkboxes-->
+  <label>Languages:</label>
+  <div class="checkbox">
+    <label><input type="checkbox" [(ngModel)]="form.html" formControlName="html">HTML</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" [(ngModel)]="form.css" formControlName="css">CSS</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"  [(ngModel)]="form.js" formControlName="js">Javascript</label>
+  </div>
+  <!-- -->
+
+  <!-- Selects -->
+  <label>Combobox</label>
+  <select class="form-control" [(ngModel)]="form.img" formControlName="img">
+    <option>default.png</option>
+    <option>car.jpg</option>
+    <option>bus.jpg</option>
+    <option>airplane.jpg</option>
+    <option>ship.jpg</option>
+  </select>
+  <!-- -->
+
+  
+  <!-- Buttons -->
+  <!-- Submit -->
+  <button type="submit" class="btn btn-success" (click)="showObjectData()" [disabled]="!form.valid">Submit</button>
+  <!-- Reset -->
+  <button type="reset" class="btn btn-danger">Reset</button>
+</form>
